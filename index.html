@@ -1,0 +1,489 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="x-ua-compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Light Theme */
+        body.light-mode {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Dark Theme */
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0 2rem;
+            background-color: #333;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Light Mode Nav */
+        body.light-mode nav {
+            background-color: #8b7979;
+            color: #000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+        }
+
+        nav .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav .nav-links li {
+            font-size: 1rem;
+        }
+
+        nav .nav-links a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav .nav-links a:hover {
+            color: #f0a500;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Light Mode Hamburger */
+        body.light-mode .hamburger .bar {
+            background-color: #000;
+        }
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-toggle {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            background-color: #f0a500;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        body.light-mode .dark-mode-toggle {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                right: 0;
+                top: 70px;
+                height: 100vh;
+                width: 100%;
+                background-color: #333;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                font-size: 1.5rem;
+            }
+
+            body.light-mode .nav-links {
+                background-color: #f0f0f0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-pic">
+        <img 
+                src="./assets/LOGO.png"
+                alt="Profile picture" 
+                class="about-pic" height="auto"
+                />
+        </div>
+        
+        <div class="logo">MURALITHARAN P</div>
+            
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#Certifications">Certifications</a></li>
+            <li><a href="#my-Projects">My Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Dark Mode Toggle Button -->
+        <button class="dark-mode-toggle" id="darkModeToggle">Dark Mode</button>
+
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+            </ul>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section_pic-container">
+            <img src="./assets/Photo.jpg" alt="MURALITHARAN profile pic" class="profile-pic" />
+        </div>
+        <div class="section__text">
+            <h1 class="section__text__p1">HELLO, I'm</h1>
+            <h1 class="title">MURALITHARAN P</h1>
+            <h1 class="section__text__p2">PRE-FINAL YEAR STUDENT OF ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</h1>
+            <br>
+            <div class="btn-container">
+                <button 
+                    class="btn btn-color-2" 
+                    onclick="window.open('./assets/murali24_s3-website.ap-south-1.amazonaws.pdf')"
+                >
+                    DOWNLOAD CV 
+                </button>
+                <button class="btn btn-color-1" onclick="location.href ='./#contact'">
+                    CONTACT INFO    
+                </button>
+            </div>
+            <div id="socials-container">
+                <img 
+                    src="./assets/linkedin.png" 
+                    alt="My LinkedIn Profile" 
+                    class="icon" 
+                    onclick="location.href='http://www.linkedin.com/in/muralitharan-p-26b942294'"
+                />
+                <img 
+                    src="./assets/github.png" 
+                    alt="My GitHub Profile" 
+                    class="icon" 
+                    onclick="location.href='https://github.com/muralitharan2004'"
+                />
+            </div>
+        </div>
+        <img 
+        src="./assets/arrow.png" 
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#about'"
+        />
+    </section>
+<!--ABOUT-->    
+    <section id="about">
+        <h3 class="section__text__p1">GET TO KNOW MORE</h3>
+        <h1 class="section__title">ABOUT ME</h1>
+    
+        <div class="section-container">
+            <div class="section_pic-container">
+                <img 
+                src="./assets/about-pic.jpg" 
+                alt="Profile picture" 
+                class="about-pic"
+                />
+            </div>
+    
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <!-- About Me Section -->
+                    <div class="details-container">
+                        <img 
+                        src="./assets/experience.png"
+                        alt="Experience icon"
+                        class="icon"
+                        />
+                        <h3>About Me !</h3>
+                        <p>
+                            Hello! I'm Muralitharan, an enthusiastic Artificial Intelligence and Data Science student at Kongunadu College of Engineering & Technology, Tiruchirapalli.<br>
+                            My journey in technology began in high school, where I developed a passion for problem-solving and analytical thinking. This led me to pursue a degree focused on AI and Data Science, where I've honed my skills in machine learning, data analysis, and statistical modeling through various academic projects and internships.<br>
+                            Recently, I've expanded my expertise to include UI/UX design. I believe the intersection of AI and user-centered design holds immense potential to create intuitive and impactful applications. By mastering UI/UX principles, I'm striving to design interfaces that are both functional and engaging.<br>
+                            Outside of my academic pursuits, I enjoy participating in hackathons, exploring the latest tech trends, and sketching design ideas. These activities keep me inspired and continuously learning, ensuring I bring fresh perspective to my work.<br>
+                            Thank you for visiting my portfolio. Feel free to browse my projects and get in touch if you'd like to collaborate or learn more about my work in AI, data science, and UI/UX design.
+                        </p>
+                    </div>
+    
+                    <br>
+    
+                    <!-- Education Section -->
+                    <div class="details-container">
+                        <img 
+                        src="./assets/education.png"
+                        alt="Education icon"
+                        class="icon"
+                        />
+                        <h3>EDUCATION</h3>
+                        <p>
+                            <strong>1. Bachelor Of Technology</strong><br>
+                            ARTIFICIAL INTELLIGENCE AND DATA SCIENCE<br>
+                            KONGUNADU COLLEGE OF ENGINEERING AND TECHNOLOGY, TIRUCHIRAPALLI.
+                        </p>
+                        <p>
+                            <strong>2. HSC</strong><br>
+                            472/600 MARKS<br>
+                            GOVERNMENT HIGHER SECONDARY SCHOOL, PANNAIKADU-624210.
+                        </p>
+                        <p>
+                            <strong>3. SSLC</strong><br>
+                            401/500 MARKS<br>
+                            GOVERNMENT HIGHER SECONDARY SCHOOL, PANNAIKADU-624210.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <img 
+        src="./assets/arrow.png" 
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#Certifications'"
+        />
+    </section>
+    
+    <!--CERTIFICATIONS-->
+</head>
+<body>
+    <section id="Certifications">
+        <h1 class="title" style="margin-top:10rem;">Certifications</h1>
+        <div class="cr-c">
+            <div class="cr-img">
+                <img src="./assets/aws.png" alt="AWS CLOUD PRACTITIONER" class="image">
+                <p>AWS CLOUD PRACTITIONER CLF-C02</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/INTERN 1 SPOTLIGHT 2024.jpg" alt="Internship on Ethical Hacking" class="image">
+                <p>INTERNSHIP ON ETHICAL HACKING</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/Introduction To Internet Of Things (1).jpg" alt="Introduction to IoT on NPTEL" class="image">
+                <p>INTRODUCTION OF IOT ON NPTEL</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/MURALITHARAN_P_interview skill 2.jpg" alt="TCS iON Interview Skills" class="image">
+                <p>TCS iON Interview Skills</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/MURALITHARAN_P_2756077.jpg" alt="TCS iON Career Edge" class="image">
+                <p>TCS iON Career Edge</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/VALUE ADDED COURSE UIUX.jpg" alt="UI / UX Value Added Course" class="image">
+                <p>UI / UX VALUE ADDED COURSE</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/MURALITHARAN-P-Participant-Certificate (1) (1).jpg" alt="Python 3.4.3" class="image">
+                <p>Python 3.4.3</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/AI tools Workshop (1).jpg" alt="AI For India 2.0" class="image">
+                <p>AI For India 2.0</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/GL PHOTOSHOP.jpeg" alt="Graphic Design in Photoshop" class="image">
+                <p>Graphic Design in Photoshop</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/JAVA SPOKEN TUTORIALS.jpeg" alt="Java Training course" class="image">
+                <p>Java Training course Spoken Tutorial</p>
+            </div>
+            <div class="cr-img">
+                <img src="./assets/flipkart.jpeg" alt="Flipkart GRiD 6.0" class="image">
+                <p>Flipkart GRiD 6.0</p>
+            </div>
+        </div>
+        <img 
+        src="./assets/arrow.png" 
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#my-Projects'"
+        />
+    </section>
+    
+    <!--my Projects-->
+    <section id="my-Projects">
+        <h1 class="title" style="margin-top:10rem;">My Projects</h1>
+        
+        <!-- Subtopic for UI/UX Projects -->
+        <h2 style="text-align:center; margin-top:2rem;">UI/UX Projects</h2>
+        <div class="pr-c">
+            <div class="work-item">
+                <video width="100%" height="auto" controls autoplay muted>
+                    <source src="./assets/design 1 apple.mp4" type="video/mp4"> 
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Apple Products E-Commerce UI/UX Design</h3>
+            </div>
+            <div class="Projects-item">
+            <div class="work-item">
+                <video width="100%" height="auto" controls autoplay muted>
+                    <source src="./assets/kodaiparadise bookdesign - Made with Clipchamp.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h4>Kodai Paradise Cottage Booking UI/UX Design</h4>
+            </div>
+        </div>
+            </div> 
+        </div>
+        <img 
+        src="./assets/arrow.png" 
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#skills'"
+        />
+    </section>
+
+    <!--skills-->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="fas fa-cloud"></i>
+                <h3>AWS Cloud Practitioner (CLF-C02)</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-cuttlefish"></i>
+                <h3>C Programming</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>UI/UX Design</h3>
+            </div>
+        </div>
+        <img 
+        src="./assets/arrow.png" 
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+        />
+    </section>
+</body>
+</html>
+
+<!--CONTACT-->
+<section id="contact" class="contact-section">
+    <h1 class="title">Contact Me</h1>
+    <p class="contact-text">Feel free to reach out for collaborations or just a friendly chat!</p>
+    
+    <div class="contact-container">
+        <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit" class="btn btn-color-2">Send Message</button>
+        </form>
+        
+        <div class="social-icons">
+            <h3>Follow Me:</h3>
+            <a href="https://www.linkedin.com/in/muralitharan-p-26b942294" target="_blank">
+                <img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://github.com/muralitharan2004" target="_blank">
+                <img src="./assets/github.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://x.com/iam_Murali49229" target="_blank">
+                <img src="./assets/X.jpeg" alt="Twitter" class="social-icon">
+            </a>
+        </div>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript for toggling the hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+         // Dark Mode Toggle
+         const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+
+            // Update button text based on the current mode
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeToggle.textContent = 'Light Mode';
+            } else {
+                darkModeToggle.textContent = 'Dark Mode';
+            }
+        });
+
+        // Initialize the theme
+        document.body.classList.add('light-mode'); // Default to light mode
+    </script>
