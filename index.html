@@ -109,6 +109,27 @@
             color: #fff;
         }
 
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                right: 0;
+                top: 8rem;
+                height: 40%;
+                width: 20%;
+                background-color: #333;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
             .nav-links.active {
                 transform: translateX(0);
             }
@@ -120,6 +141,7 @@
             body.light-mode .nav-links {
                 background-color: #f0f0f0;
             }
+        }
     </style>
 </head>
 <body>
@@ -135,7 +157,7 @@
         
         <div class="logo">MURALITHARAN P</div>
             
-        <ul class="nav-links"></ul>
+        <ul class="nav-links">
             <li><a href="#about">About Me</a></li>
             <li><a href="#Certifications">Certifications</a></li>
             <li><a href="#my-Projects">My Projects</a></li>
@@ -146,7 +168,11 @@
         <!-- Dark Mode Toggle Button -->
         <button class="dark-mode-toggle" id="darkModeToggle">Dark Mode</button>
 
-        
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </nav>
 
             </ul>
@@ -460,4 +486,4 @@
 
         // Initialize the theme
         document.body.classList.add('light-mode'); // Default to light mode
-    </script>
+    </script>.this code to fix the problem
